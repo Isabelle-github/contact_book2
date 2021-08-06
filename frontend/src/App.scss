@@ -20,7 +20,6 @@ $fontTitles:'Open Sans', sans-serif;
 }
 // HOME
 body{
-
     margin: 0; 
     header{
         padding: 3em;
@@ -86,7 +85,7 @@ body{
                    padding: 1em;
                    border-radius: 1em;
                    outline: none;
-                   border: solid $green-color 3px;
+                   border: solid $gray-color 3px;
                    color: $white-color;
                 }
                 input:focus{
@@ -95,13 +94,13 @@ body{
                 
                 input:first-of-type{
                     width: 70%;
-                    color: $green-color;
-                    background-color: $dark-color;
+                    color: $gray-color;
+                    background-color: $black-color;
                 }
                 input:last-of-type{
                     color: $white-color;
                     padding: 1em;
-                    background-color: $green-color;
+                    background-color: $gray-color;
                     width: 20%;
                 }
             }
@@ -152,5 +151,11 @@ body{
     
     &:after {  
       transform: rotate(35deg);
+    }
+}
+.star.fav{
+    border-bottom: .7em  solid $yellow-color;
+    &:before, &:after { 
+      border-bottom: .7em  solid $yellow-color;
     }
 }

@@ -95,6 +95,41 @@ body main #contactDetail div:first-of-type img {
   margin: 0 auto;
 }
 
+body main #addContact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+body main #addContact form input {
+  padding: 1em;
+  border-radius: 1em;
+  outline: none;
+  border: solid #757575 3px;
+  color: #FFFFFF;
+}
+
+body main #addContact form input:focus {
+  outline: none;
+}
+
+body main #addContact form input:first-of-type {
+  width: 70%;
+  color: #757575;
+  background-color: #000000;
+}
+
+body main #addContact form input:last-of-type {
+  color: #FFFFFF;
+  padding: 1em;
+  background-color: #757575;
+  width: 20%;
+}
+
 body footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,5 +173,13 @@ body footer {
 .star:after {
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
+}
+
+.star.fav {
+  border-bottom: 0.7em solid #E8C443;
+}
+
+.star.fav:before, .star.fav:after {
+  border-bottom: 0.7em solid #E8C443;
 }
 /*# sourceMappingURL=App.css.map */

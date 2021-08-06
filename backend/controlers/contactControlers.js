@@ -2,7 +2,7 @@ const Contact = require('../models/contact')
 
 const contact_index_get = (req, res) => {
     console.log('a get request ')
-    Contact.find()
+    Contact.find().sort({})
         .then((result) => {
             console.log(result)
             res.json(result)
@@ -12,11 +12,14 @@ const contact_index_get = (req, res) => {
             console.log(err)
             // res.end()
         })
+
 }
 
-const contact_index_post = (req, res) => {
+const contact_add_post = (req, res) => {
     console.log(req.body)
-    const contact = new Contact(req.body)
+    const contact = new Contact({
+        //my req.body but more defined
+    })
     contact.save()
         .then((result) => {
             console.log(result)
@@ -84,7 +87,7 @@ const contact_add_favorite = (req, res) => {
 
 module.exports = {
     contact_index_get,
-    contact_index_post,
+    contact_add_post,
     contact_detail_get,
     contact_favorites_get,
     contact_add_favorite

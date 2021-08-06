@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useState } from "react";
+import Star from "./Star";
 
 const Contacts = () => {
     const [contactData, setData] = useState(null)
     const [isFav, setFav] = useState(false)
+    let count = 0
     useEffect(() => {
         console.log(contactData)
         axios.get('/api/contacts')
@@ -15,7 +17,7 @@ const Contacts = () => {
             .catch((err) => { console.log(err) })
 
         console.log(contactData)
-    }, [isFav])
+    }, [count])
 
     return (
         <main>
@@ -29,7 +31,9 @@ const Contacts = () => {
                                 <h3>{contactObj.name.firstName}   {contactObj.name.lastName}</h3>
                             </Link>
                         </div>
-                        <div onClick={(e) => { setFav(!isFav) }}><i className='star'></i></div>
+                        <Star fav={contactObj.isFavorite}></Star>
+                        {/* <Star fav={() => setFav(contactObj.isFavorite)}></Star> */}
+                        {/* <div onClick={() => { setFav(!isFav) }}><i className={isFav ? 'star fav' : 'star'}></i></div> */}
                     </article>))}
             </section>
         </main>
