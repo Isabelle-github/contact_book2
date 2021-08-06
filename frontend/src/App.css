@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+body {
+  margin: 0;
+}
+
+body header {
+  padding: 3em;
+  border-style: solid;
+}
+
+body main {
+  min-height: 100vh;
+}
+
+body main #allContacts {
+  padding: 3em;
+}
+
+body main #allContacts article {
+  padding-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: solid #757575 1px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #allContacts article div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #allContacts article div a img {
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+}
+
+body main #allContacts article div a h3 {
+  text-align: left;
+  padding-left: 3em;
+}
+
+body main #contactDetail {
+  text-align: center;
+  padding: 3em;
+}
+
+body main #contactDetail div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 4fr;
+      grid-template-columns: 1fr 1fr 4fr;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  border-bottom: solid #757575 1px;
+}
+
+body main #contactDetail div:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main #contactDetail div:first-of-type img {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  border-right: .3em solid transparent;
+  border-bottom: 0.7em solid #757575;
+  border-left: .3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+}
+
+.star:before, .star:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: .6em;
+  left: -1em;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid #757575;
+  border-left: 1em solid transparent;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.star:after {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+/*# sourceMappingURL=App.css.map */
