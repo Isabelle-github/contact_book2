@@ -6,7 +6,7 @@ const Foot = () => {
         <footer>
             <figure>
                 <Link to={`/favorites`}>
-                    <i class='star'></i>
+                    <i className='star'></i>
                     <figcaption>
                         Favourites
                     </figcaption>
@@ -14,7 +14,7 @@ const Foot = () => {
             </figure>
             <figure>
                 <Link to={`/`}>
-                    <i class='star'></i>
+                    <i className='star'></i>
                     <figcaption>
                         Contacts
                     </figcaption>
@@ -22,7 +22,7 @@ const Foot = () => {
             </figure>
             <figure>
                 <Link to={`/`}>
-                    <i class='star'></i>
+                    <i className='star'></i>
                     <figcaption>
                         Recents
                     </figcaption>

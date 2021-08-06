@@ -77,15 +77,17 @@ body{
         #addContact{
             form{
                 display: flex;
-                
+                flex-direction: column;
                 justify-content: space-between;
-                // outline: $yellow-color solid;
+                
                 width: 60%;
+                margin: 0 auto;
                 input{
+                    margin-top: 3em;
                    padding: 1em;
                    border-radius: 1em;
                    outline: none;
-                   border: solid $gray-color 3px;
+                   border-bottom: solid $gray-color 3px;
                    color: $white-color;
                 }
                 input:focus{
@@ -101,7 +103,7 @@ body{
                     color: $white-color;
                     padding: 1em;
                     background-color: $gray-color;
-                    width: 20%;
+                    
                 }
             }
         }
