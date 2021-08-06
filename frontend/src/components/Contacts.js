@@ -9,7 +9,7 @@ const Contacts = () => {
         console.log(contactData)
         axios.get('/api/contacts')
             .then((result) => {
-                // console.log(result.data)
+                console.log(result.data)
                 setData(result.data)
             })
             .catch((err) => { console.log(err) })
