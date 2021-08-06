@@ -28,16 +28,17 @@ const AddContact = () => {
                     <h1>&#9756; All Contacts</h1>
                 </Link>
                 <form action='api/contacts/newContact' method="POST">
-                    <input type="text" name='firsName' placeholder="First Name" required></input>
-                    <input type="text" name='lastName' placeholder="Last Name" required></input>
+                    <input type="text" name='firsName' placeholder="First Name" ></input>
+                    <input type="text" name='lastName' placeholder="Last Name"></input>
                     <input type="url" name='avatar' placeholder="Picture" ></input>
                     <label htmlFor="horns">Private</label>
                     <input type="email" name='email' placeholder="email"></input>
-                    <input type="text" name='p_phone' placeholder="Phone" required></input>
+                    <input type="text" name='p_phone' placeholder="Phone" ></input>
                     <input type="text" name='p_city' placeholder="City"></input>
                     <input type="text" name='p_country' placeholder="Country"></input>
-                    <input type="text" name='p_street' placeholder="Street"></input>
-                    <input type="text" name='postalCode' placeholder="Street"></input>
+                    <input type="text" name='p_street' placeholder="Street Name"></input>
+                    <input type="Number" name='p_streetNr' placeholder="Street Number"></input>
+                    <input type="text" name='postalCode' placeholder="Postal code"></input>
                     <label htmlFor="horns">Work</label>
                     <input type="text" name='jobTitle' placeholder="Job Title" ></input>
                     <input type="text" name='org_name' placeholder="Organization/Company" ></input>

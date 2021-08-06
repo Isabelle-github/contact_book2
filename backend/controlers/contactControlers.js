@@ -10,7 +10,7 @@ const contact_index_get = (req, res) => {
         })
         .catch((err) => {
             console.log(err)
-            // res.end()
+            res.json({ redirect: "/404" })
         })
 
 }
@@ -19,17 +19,50 @@ const contact_add_post = (req, res) => {
     console.log(req.body)
     const contact = new Contact({
         //my req.body but more defined
-        // contact.name.firstName: req.body.firstName,
-        // contact.name.lastName: req.body.lastName,
+        name: {
+            firstName: req.body.firstName,
+            lastName: req.body.lastName
+        },
+        avatar_url: req.body.avatar,
+
+        private: {
+            p_email: req.body.email,
+            p_phone: {
+                mobile: req.body.p_phone,
+                home: req.body.p_phone
+            },
+            p_address: {
+                city: req.body.p_city,
+                country: req.body.p_country,
+                street: req.body.p_street,
+                postalcode: req.body.postalcode,
+                streetNr: req.body.p_streetNr
+            },
+        },
+        work: {
+            jobTitle: req.body.jobTitle,
+            w_phone: req.body.w_phone,
+            w_org: {
+                name: req.body.org_name,
+                address: req.body.w_address,
+                department: req.body.w_department
+            }
+        },
+        notes: req.body.w_notes,
+        isFamily: (req.body.Family == 'on' ? true : false),
+        isFriend: (req.body.Friend == 'on' ? true : false),
+        isAcquaintance: (req.body.Acquaintance == 'on' ? true : false),
+        isColleague: (req.body.Colleague == 'on' ? true : false),
+        isFavorite: false
     })
     contact.save()
         .then((result) => {
             console.log(result)
-            res.end()
+            res.json({ redirect: "/" })
         })
         .catch((err) => {
             console.log(err)
-            res.end()
+            res.json({ redirect: "/404" })
         })
 }
 const contact_detail_get = (req, res) => {
@@ -42,7 +75,7 @@ const contact_detail_get = (req, res) => {
         })
         .catch((err) => {
             console.log(err)
-            res.end()
+            res.json({ redirect: "/404" })
         })
 }
 const contact_favorites_get = (req, res) => {
@@ -55,7 +88,7 @@ const contact_favorites_get = (req, res) => {
         })
         .catch((err) => {
             console.log(err)
-            res.end()
+            res.json({ redirect: "/404" })
         })
 }
 
