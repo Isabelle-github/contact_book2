@@ -27,7 +27,7 @@ const AddContact = () => {
                 <Link to={`/`}>
                     <h1>&#9756; All Contacts</h1>
                 </Link>
-                <form action='/addMovie/send' method="POST">
+                <form action='api/contacts/newContact' method="POST">
                     <input type="text" name='firsName' placeholder="First Name" required></input>
                     <input type="text" name='lastName' placeholder="Last Name" required></input>
                     <input type="url" name='avatar' placeholder="Picture" ></input>

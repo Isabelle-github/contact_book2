@@ -19,13 +19,8 @@ const contact_add_post = (req, res) => {
     console.log(req.body)
     const contact = new Contact({
         //my req.body but more defined
-        // id: dataArticle.length,
-        // url: req.body.urlPicture,
-        // title: req.body.title,
-        // body: req.body.text,
-        // published_at: currentDay,
-        // author: req.body.author,
-        // author_bild: req.body.authorPic
+        // contact.name.firstName: req.body.firstName,
+        // contact.name.lastName: req.body.lastName,
     })
     contact.save()
         .then((result) => {
