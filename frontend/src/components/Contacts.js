@@ -5,7 +5,7 @@ import Star from "./Star";
 
 const Contacts = () => {
     const [contactData, setData] = useState(null)
-    const [isFav, setFav] = useState(false)
+    // const [isFav, setFav] = useState(false)
     let count = 0
     useEffect(() => {
         console.log(contactData)

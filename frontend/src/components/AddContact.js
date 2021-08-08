@@ -6,21 +6,7 @@ import {
 } from "react-router-dom";
 
 const AddContact = () => {
-    // const [contactObj, setObj] = useState(null)
-    // let { id } = useParams()
-    // console.log(id)
-    // useEffect(() => {
-    //     console.log(`/api/contacts/AddContact/${id}`)
-    //     console.log(contactObj)
-    //     axios.get(`/api/contacts/AddContact/${id}`)
-    //         .then((result) => {
-    //             console.log(result.data)
-    //             setObj(result.data)
-    //         })
-    //         .catch((err) => { console.log(err) })
 
-    //     console.log(contactObj)
-    // }, [])
     return (
         <main>
             <section id='addContact'>

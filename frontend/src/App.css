@@ -10,22 +10,26 @@
 
 body {
   margin: 0;
+  margin-top: 15%;
 }
 
 body header {
   padding: 3em;
-  border-style: solid;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 body main {
+  margin-bottom: 15%;
   min-height: 100vh;
 }
 
-body main #allContacts {
+body main #allContacts, body main #favorites {
   padding: 3em;
 }
 
-body main #allContacts article {
+body main #allContacts article, body main #favorites article {
   padding-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,7 +43,7 @@ body main #allContacts article {
           align-items: center;
 }
 
-body main #allContacts article div a {
+body main #allContacts article div a, body main #favorites article div a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,13 +52,13 @@ body main #allContacts article div a {
           align-items: center;
 }
 
-body main #allContacts article div a img {
+body main #allContacts article div a img, body main #favorites article div a img {
   width: 60px;
   border-radius: 50%;
   height: 60px;
 }
 
-body main #allContacts article div a h3 {
+body main #allContacts article div a h3, body main #favorites article div a h3 {
   text-align: left;
   padding-left: 3em;
 }
@@ -136,6 +140,9 @@ body main #addContact form input:last-of-type {
 }
 
 body footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

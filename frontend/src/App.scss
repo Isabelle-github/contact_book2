@@ -21,14 +21,19 @@ $fontTitles:'Open Sans', sans-serif;
 // HOME
 body{
     margin: 0; 
+    margin-top:15% ;
+    
     header{
-        padding: 3em;
-       border-style: solid;
+       padding: 3em;
+    //    border-style: solid;
+       position: fixed;
+       top:0;
+       width:100%; 
     }
     main{
+        margin-bottom: 15%;
         min-height: 100vh; 
-        
-        #allContacts{
+        #allContacts, #favorites{
             padding: 3em;
             article{
                 padding-bottom:1em ;
@@ -107,8 +112,12 @@ body{
                 }
             }
         }
+        
     } 
     footer{
+        position: fixed;
+        bottom:0;
+        width:100%; 
         display: flex;
         padding: 3em;
         justify-content: space-between;

@@ -5,7 +5,8 @@ import Head from './components/Head';
 import Contacts from './components/Contacts';
 import Foot from './components/Foot';
 import ContactDetail from './components/ContactDetail';
-import AddContact from './components/AddContact'
+import AddContact from './components/AddContact';
+import Favorites from './components/Favorites'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Head />
         <Switch>
           <Route path="/" exact component={Contacts} />
-          <Route path="/favorites" exact component={ContactDetail} />
+          <Route path="/favorites" exact component={Favorites} />
           <Route path="/addContact" exact component={AddContact} />
           <Route path="/contactDetail/:id" exact component={ContactDetail} />
         </Switch>

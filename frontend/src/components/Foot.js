@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import contact from '../img/contact.svg';
+import recent from '../img/recent.svg';
 
 
 const Foot = () => {
@@ -14,7 +16,8 @@ const Foot = () => {
             </figure>
             <figure>
                 <Link to={`/`}>
-                    <i className='star'></i>
+                    {/* <i className='star'></i> */}
+                    <img src={contact} alt='img'></img>
                     <figcaption>
                         Contacts
                     </figcaption>
@@ -22,7 +25,7 @@ const Foot = () => {
             </figure>
             <figure>
                 <Link to={`/`}>
-                    <i className='star'></i>
+                    <img src={recent} alt='img'></img>
                     <figcaption>
                         Recents
                     </figcaption>

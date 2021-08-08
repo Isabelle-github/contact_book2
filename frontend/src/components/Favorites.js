@@ -1,33 +1,34 @@
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useState } from "react";
+import Star from "./Star";
 
 const Favorites = () => {
-    const [contactData, setData] = useState(null)
+    const [favData, setfavData] = useState(null)
     useEffect(() => {
-        console.log(contactData)
+        console.log(favData)
         axios.get('/api/contacts/favorites')
             .then((result) => {
                 console.log(result.data)
-                setData(result.data)
+                setfavData(result.data)
             })
             .catch((err) => { console.log(err) })
 
-        console.log(contactData)
+        console.log(favData)
     }, [])
     return (
         <main>
-            <section id='allContacts'>
+            <section id='favorites'>
                 <h1>Favorites</h1>
-                {contactData && (contactData.map(contactObj =>
+                {favData && (favData.map(contactObj =>
                     <article key={contactObj._id} >
                         <div>
                             <Link to={`/contactDetail/${contactObj._id}`}>
                                 <img src={contactObj.avatar_url} alt="img"></img>
-                                <h3>{contactObj.name.firstName}   {contactObj.name.lastName}</h3>
+                                <h3> {contactObj.name.firstName}  {contactObj.name.lastName}</h3>
                             </Link>
                         </div>
-                        <div><i className='star'></i></div>
+                        <Star fav={contactObj.isFavorite}></Star>
                     </article>))}
             </section>
         </main>

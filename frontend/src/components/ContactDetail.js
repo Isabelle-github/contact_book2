@@ -5,10 +5,12 @@ import {
     useParams
 } from "react-router-dom";
 
+let count = 0
 const ContactDetail = () => {
     const [contactObj, setObj] = useState(null)
     let { id } = useParams()
-    console.log(id)
+
+    console.log('here the id from params: ' + id)
     useEffect(() => {
         console.log(`/api/contacts/contactDetail/${id}`)
         console.log(contactObj)
@@ -20,7 +22,7 @@ const ContactDetail = () => {
             .catch((err) => { console.log(err) })
 
         console.log(contactObj)
-    }, [])
+    }, [count])
     return (
         <main>
             <section id='contactDetail'>
