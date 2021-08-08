@@ -96,36 +96,26 @@ const contact_favorites_get = (req, res) => {
 const contact_add_favorite = (req, res) => {
     console.log(req.params.id)
     const currentContact = Contact.where({ _id: req.params.id });
-    console.log(currentContact)
+    // console.log(currentContact)
     currentContact.update({ $set: { isFavorite: true } }).exec()
     console.log('contact added as favorite')
-
-    //     .then((result) => {
-    //         console.log('movie added as favorite')
-    //         console.log(result)
-    //         res.render('movieDetail', { myPageTitle: `${appName}|MOVIE DETAIL`, movieFound: currentMovie })
-    //     })
-    //     .catch((err) => {
-    //         res.send(err)
-    //         console.log(err)
-    //     })
+    // console.log(currentContact.isFavorite)
+}
+const contact_remove_favorite = (req, res) => {
+    console.log(req.params.id)
+    const currentContact = Contact.where({ _id: req.params.id });
+    // console.log(currentContact)
+    currentContact.update({ $set: { isFavorite: false } }).exec()
+    console.log('contact removed from favorite')
+    // res.redirect('/favorites')
 
 }
-// const contact_remove_favorite = (req, res) => {
-//     console.log(req.params.id)
-//     const currentMovie = Movie_Item.where({ _id: req.params.id });
-//     console.log(currentMovie)
-//     currentMovie.update({ $set: { isFavorite: false } }).exec()
-//     console.log('movie removed from favorite')
-//     res.redirect('/favorites')
-
-// }
 
 module.exports = {
     contact_index_get,
     contact_add_post,
     contact_detail_get,
     contact_favorites_get,
-    contact_add_favorite
-    // contact_remove_favorite
+    contact_add_favorite,
+    contact_remove_favorite
 }

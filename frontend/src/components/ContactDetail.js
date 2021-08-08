@@ -12,16 +12,28 @@ const ContactDetail = () => {
 
     console.log('here the id from params: ' + id)
     useEffect(() => {
+        const abortControl = new AbortController();
         console.log(`/api/contacts/contactDetail/${id}`)
         console.log(contactObj)
-        axios.get(`/api/contacts/contactDetail/${id}`)
+        axios.get(`/api/contacts/contactDetail/${id}`, { signal: abortControl.signal })
             .then((result) => {
                 console.log(result.data)
                 setObj(result.data)
             })
-            .catch((err) => { console.log(err) })
+            .catch((err) => {
+                if (err.name === 'AbortError') {
+                    console.log('err fetch abortion')
+                } else {
+                    console.log(err)
+                }
+
+            })
 
         console.log(contactObj)
+        return () => {
+            abortControl.abort();
+            console.log('cleanup: fetching aborted')
+        }
     }, [count])
     return (
         <main>
