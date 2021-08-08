@@ -3,8 +3,10 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import Star from "./Star";
 
+
 const Favorites = () => {
     const [favData, setfavData] = useState(null)
+
     useEffect(() => {
         const abortControl = new AbortController();
         console.log(favData)

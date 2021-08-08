@@ -6,11 +6,12 @@
   font-family: "Roboto", sans-serif;
   color: #FFFFFF;
   background-color: #000000;
+  text-decoration: none;
 }
 
 body {
   margin: 0;
-  margin-top: 15%;
+  margin-top: 30%;
 }
 
 body header {
@@ -18,6 +19,83 @@ body header {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+body header .head1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2em;
+}
+
+body header .head1 div {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header .head1 div img {
+  width: 3em;
+}
+
+body header .head2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2em;
+}
+
+body header .head2 form {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .head2 form input {
+  width: 100%;
+  padding: 1em;
+}
+
+body header .head2 form input:last-child {
+  width: 30%;
+}
+
+body header .head2 div {
+  border-radius: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header .head2 div a {
+  text-decoration: none;
+  text-align: center;
 }
 
 body main {
@@ -68,7 +146,7 @@ body main #contactDetail {
   padding: 3em;
 }
 
-body main #contactDetail div {
+body main #contactDetail article div {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 4fr;
@@ -82,7 +160,15 @@ body main #contactDetail div {
   border-bottom: solid #757575 1px;
 }
 
-body main #contactDetail div:first-of-type {
+body main #contactDetail article div img {
+  width: 3em;
+}
+
+body main #contactDetail article div .more {
+  border-bottom: none;
+}
+
+body main #contactDetail article div:first-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,7 +178,7 @@ body main #contactDetail div:first-of-type {
           flex-direction: column;
 }
 
-body main #contactDetail div:first-of-type img {
+body main #contactDetail article div:first-of-type img {
   width: 100px;
   height: 100px;
   display: inline-block;
@@ -150,6 +236,10 @@ body footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body footer figure a svg path {
+  fill: #2083F6;
 }
 
 .star {

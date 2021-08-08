@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from 'axios';
 
+
 const Star = (props) => {
+
     console.log(props)
     const [isfav, setfav] = useState(props.fav)
     // const [idParam, setidParam] = useState(props.idParam)

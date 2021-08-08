@@ -17,18 +17,62 @@ $fontTitles:'Open Sans', sans-serif;
     font-family: $fontText;
     color: $white-color;
     background-color:$black-color; 
+    text-decoration: none;
 }
 // HOME
 body{
     margin: 0; 
-    margin-top:15% ;
+    margin-top:30% ;
     
     header{
        padding: 3em;
+    //    overflow: hidden;
     //    border-style: solid;
        position: fixed;
        top:0;
        width:100%; 
+       .head1{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding-bottom: 2em;
+           div{
+               width: 15%;
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               img{
+                   width: 3em;
+               }
+           }
+       }
+       .head2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 2em;
+        form{
+            width: 60%;
+            display: flex;
+            input{
+               width: 100%;
+               padding:1em;
+            }
+            input:last-child{
+                width: 30%;
+             }
+        }
+        div{
+            border-radius: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+    }
     }
     main{
         margin-bottom: 15%;
@@ -59,23 +103,31 @@ body{
         #contactDetail{
             text-align: center;
             padding: 3em;
-            div{
-                display: grid;
-                grid-template-columns: 1fr 1fr 4fr;
-                gap: 1em;
-                align-items: center;
-                padding-top: 3em;
-                padding-bottom: 3em;
-                border-bottom: solid $gray-color 1px;
-            }
-            div:first-of-type{
-                display: flex;
-                flex-direction: column;
-                img{
-                    width: 100px;
-                    height: 100px;
-                    display: inline-block;
-                    margin: 0 auto;
+            article{
+                div {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 4fr;
+                    gap: 1em;
+                    align-items: center;
+                    padding-top: 3em;
+                    padding-bottom: 3em;
+                    border-bottom: solid $gray-color 1px;
+                    img{
+                        width: 3em;
+                    }
+                    .more{
+                        border-bottom: none
+                    }
+                }
+                div:first-of-type{
+                    display: flex;
+                    flex-direction: column;
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        display: inline-block;
+                        margin: 0 auto;
+                    }
                 }
             }
         }
@@ -121,6 +173,13 @@ body{
         display: flex;
         padding: 3em;
         justify-content: space-between;
+        figure{
+            a{
+                svg path{
+                    fill: $blue-color;
+                }
+            }
+        }
     }  
 }
 

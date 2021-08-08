@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 import {
     useParams
 } from "react-router-dom";
+import phone from '../img/phone.svg';
+import mobile from '../img/mobile.svg';
+import place from '../img/place.svg';
+import plus from '../img/plus.svg';
+
+
 
 let count = 0
 const ContactDetail = () => {
@@ -26,7 +32,6 @@ const ContactDetail = () => {
                 } else {
                     console.log(err)
                 }
-
             })
 
         console.log(contactObj)
@@ -49,33 +54,33 @@ const ContactDetail = () => {
                             <h2>{contactObj.name.firstName}   {contactObj.name.lastName}</h2>
                         </div>
                         <div>
-                            <img src='/' alt='img'></img>
+                            <img src={mobile} alt='img'></img>
                             <h1>Mobil</h1>
                             <h2>{contactObj.private.p_phone.mobile}</h2>
                         </div>
                         <div>
-                            <img src='/' alt='img'></img>
+                            <img src={phone} alt='img'></img>
                             <h1>Festnetz</h1>
                             <h2>{contactObj.private.p_phone.home}</h2>
                         </div>
                         <div>
-                            <img src='/' alt='img'></img>
+                            <img src={place} alt='img'></img>
                             <h1>Address</h1>
-                            <div>
+                            <div className='more'>
                                 <h2>{contactObj.private.p_address.street} {contactObj.private.p_address.streetNr}</h2>
                                 <h2>{contactObj.private.p_address.city} , {contactObj.private.p_address.country}</h2>
                             </div>
 
                         </div>
                         <div>
-                            <img src='/' alt='img'></img>
+                            <img src={mobile} alt='img'></img>
                             <h1>Email</h1>
                             <h2>{contactObj.private.p_email}</h2>
                         </div>
                         <div>
-                            <img src='/' alt='img'></img>
+                            <img src={place} alt='img'></img>
                             <h1>Arbeit</h1>
-                            <div>
+                            <div className='more'>
                                 <h2>{contactObj.work.jobTitle}</h2>
                                 <h2>{contactObj.work.w_org.name}, {contactObj.work.w_org.department}</h2>
                                 <h2>{contactObj.work.w_org.address}</h2>
@@ -85,7 +90,7 @@ const ContactDetail = () => {
                         </div>
 
                         <div>
-                            <img src='/' alt='img'></img>
+                            <img src={plus} alt='img'></img>
                             <h1>Notes</h1>
                             <h1>{contactObj.notes}</h1>
                         </div>
