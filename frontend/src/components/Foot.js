@@ -24,7 +24,7 @@ const Foot = () => {
                 </Link>
             </figure>
             <figure>
-                <Link to={`/`}>
+                <Link to={`/recents`}>
                     <img src={recent} alt='img'></img>
                     <figcaption>
                         Recents

@@ -10,21 +10,31 @@ import place from '../img/place.svg';
 import plus from '../img/plus.svg';
 
 
+// import recentContacts from '../recentContacts';
+let recentlyViewedList = [];
+// const writeJsonFile = require('write-json-file');
+
 
 let count = 0
 const ContactDetail = () => {
     const [contactObj, setObj] = useState(null)
+    // const [lastViewed, setLastViewed] = useState(recentlyViewedList)
+
     let { id } = useParams()
 
-    console.log('here the id from params: ' + id)
     useEffect(() => {
         const abortControl = new AbortController();
-        console.log(`/api/contacts/contactDetail/${id}`)
+        // console.log(`/api/contacts/contactDetail/${id}`)
         console.log(contactObj)
+
         axios.get(`/api/contacts/contactDetail/${id}`, { signal: abortControl.signal })
             .then((result) => {
                 console.log(result.data)
                 setObj(result.data)
+                localStorage.setItem('recentItem', JSON.stringify(result.data))
+                let obj = localStorage.getItem('recentItem')
+                recentlyViewedList.push(JSON.parse(obj))
+                console.log(recentlyViewedList)
             })
             .catch((err) => {
                 if (err.name === 'AbortError') {
@@ -33,8 +43,10 @@ const ContactDetail = () => {
                     console.log(err)
                 }
             })
-
         console.log(contactObj)
+        // (async () => {
+        //     await writeJsonFile('../recentContacts.json', { recentlyViewedList });
+        // })();
         return () => {
             abortControl.abort();
             console.log('cleanup: fetching aborted')

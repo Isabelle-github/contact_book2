@@ -7,6 +7,7 @@ import Foot from './components/Foot';
 import ContactDetail from './components/ContactDetail';
 import AddContact from './components/AddContact';
 import Favorites from './components/Favorites'
+import Recents from "./components/Recents";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Contacts} />
           <Route path="/favorites" exact component={Favorites} />
+          <Route path="/recents" exact component={Recents} />
           <Route path="/addContact" exact component={AddContact} />
           <Route path="/contactDetail/:id" exact component={ContactDetail} />
         </Switch>
