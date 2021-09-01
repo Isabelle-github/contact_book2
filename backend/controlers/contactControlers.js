@@ -49,7 +49,7 @@ const contact_add_post = (req, res) => {
             }
         },
         notes: req.body.w_notes,
-        isFamily: (req.body.Family == 'on' ? true : false),
+        isFamily: req.body.mark,
         isFriend: (req.body.Friend == 'on' ? true : false),
         isAcquaintance: (req.body.Acquaintance == 'on' ? true : false),
         isColleague: (req.body.Colleague == 'on' ? true : false),

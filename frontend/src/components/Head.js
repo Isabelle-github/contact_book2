@@ -16,7 +16,8 @@ const Head = () => {
     return (
         <header>
             <div className='head1'>
-                <h1>{date}, {time}</h1>
+                <h1>{time}</h1>
+                {/* <h1>{date}, {time}</h1> */}
                 <div>
                     <img src={connection} alt="img"></img>
                     <img src={battery} alt="img"></img>
